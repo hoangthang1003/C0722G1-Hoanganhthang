@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+
+</head>
+<style>
+    table {
+        width: 50%;
+    }
+
+    td {
+        text-align: center;
+    }
+
+    .kt {
+        width: 200px;
+    }
+</style>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th> To currency</th>
+        <th></th>
+    </tr>
+    <th><input type="text" id="Am"></th>
+    <th>
+        <select id="NT">
+    <option value="USD">USD</option>
+        <option value="VND">VND</option>
+        </select>
+    </th>
+    <th>
+        <select id="DT">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+        </select>
+    </th>
+        <th>
+            <button type="button" onclick="doitien();">Convert</button>
+    </th>
+</table>
+<p id="kq"></p>
+</body>
+<script>
+    function doitien() {
+
+        let Amount = document.getElementById('Am').value;
+        let FC = document.getElementById('NT').value;
+        let TC = document.getElementById('DT').value;
+        let chuyen_doi;
+        if (FC == "VND" && TC == "USD") {
+            chuyen_doi = ("số tiền chuyển đổi là:" + Amount / 24000 +"$");
+        }else if(FC=="USD"&& TC=="VND"){
+            chuyen_doi=("số tiền chuyển đổi là "+ Amount*24000+"đồng");
+        }
+        document.getElementById("kq").innerHTML = chuyen_doi;
+    }
+</script>
+</html>
