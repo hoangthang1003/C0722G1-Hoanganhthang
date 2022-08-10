@@ -7,9 +7,19 @@
 <body>
 </body>
 <script>
-    let soDien=prompt('Nhập số điện đã dùng')
-    if (sodien<50) {
-        alert('số tiền điện tháng này là:' "sodien")
+    let kWh=prompt('Nhập số điện đã dùng')
+    if (kWh<51) {
+        alert('số tiền điện tháng này là:'+ kWh*1.678)
+    } else if(kWh<=100) {
+        alert('số tiền điện tháng này là:'+ kWh*1.734)
+    } else if (kWh<=200) {
+        alert('số tiền điện tháng này là:'+ kWh*2014)
+    } else if (kWh<=300) {
+        alert('số tiền điện tháng này là:'+ kWh*2536)
+    } else if (kWh<=400) {
+        alert('số tiền điện tháng này là:'+ kWh*2834)
+    } else if (kWh>=401) {
+        alert('số tiền điện tháng này là:'+ kWh*2927)
     }
 </script>
 </html>
