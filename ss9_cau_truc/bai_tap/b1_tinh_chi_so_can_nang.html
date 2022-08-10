@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng</title>
+</head>
+<body>
+<script>
+    let weight=prompt('Nhập só cân nặng');
+    let height=prompt('Nhập chỉ số chiều cao');
+    let BMI=weight/(height*height)
+
+    if  (BMI<18){
+        document.write("Underweight");
+    } else if(BMI<25.0){
+        document.write("Nomal");
+    } else if (BMI<30.0){
+        document.write("Overweight");
+    } else{
+        document.write("Obese")
+    }
+   // document.write("Chỉ số BMI là="+BMI);
+</script>
+</body>
+</html>
