@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let num=[3,1,5,6,8,9];
+let max = 0;
+let total = 0;
+for (let i = 0; i < num.length; i++) {
+    if(max<num[i]) {
+        max = num[i]
+        total += num[i]/num.length
+    }
+} document.write("Số lớn nhất là:"+ max +"<br>"+"Tb:"+ total)
+</script>
+</body>
+</html>

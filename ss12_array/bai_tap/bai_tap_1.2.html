@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type ="text" id="input">
+    <button onclick="dich()">Dịch</button>
+    <div id='ketqua'></div>
+</form>
+<script>
+    let  tiengA = ["Banana","Apple","Melon","guava"];
+    let  tiengV =["Chuối","Táo","Dưa gang","ổi"];
+    function dich() {
+    let input = document.getElementById('input').value;
+    for (let i = 0; i <tiengA.length; i++) {
+        if ( input === tiengA[i] ) {
+            document.getElementById('ketqua').innerHTML = tiengV[i];
+            break;
+        }
+        else {
+            document.getElementById('ketqua').innerHTML = "Không có từ này"
+        }
+      }
+    }
+</script>
+</body>
+</html>
