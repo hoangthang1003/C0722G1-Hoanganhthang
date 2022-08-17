@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let num = prompt("Nhập số từ vào:");
+let count =0;
+console.log(typeof count)
+for (let i = 0; i < num.length; i++) {
+    if (typeof num[i] === "string" ) {
+        document.write( num[i]+"<br>");
+        count++;
+    }
+} document.write("Có tất cả "+ count + " từ")
+</script>
+</body>
+</html>
