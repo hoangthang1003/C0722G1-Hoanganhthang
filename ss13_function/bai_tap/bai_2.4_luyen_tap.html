@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. -->
+<!--Nếu là ký tự số hàm trả về true, ngược lại trả về false.-->
+<script>
+    function check_Number(Kytu) {
+        if (!isNaN(Kytu)) {
+            document.write("True")
+        } else {
+            document.write("False")
+        }
+    }
+    check_Number(+prompt("nhập số"))
+</script>
+</body>
+</html>
