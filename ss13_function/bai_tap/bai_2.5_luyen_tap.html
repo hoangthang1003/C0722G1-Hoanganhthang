@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Viết hàm nhận vào 3 số nguyên bất kỳ,
+    //     trả về số nguyên có giá trị nhỏ nhất.
+    function ketQua(num1,num2,num3) {
+         if (num1>num3 && num2>num3){
+             return num3;
+         }else if (num2>num1 && num3>num1 ){
+             return num1;
+         }else {
+             return num2;
+         }
+     }
+     let num1 = +prompt("Nhập số thứ nhất");
+     let num2 = +prompt("Nhập số thứ hai");
+     let num3 = +prompt("Nhập số thứ ba");
+     document.write(ketQua(num1,num2,num3))
+</script>
+</body>
+</html>

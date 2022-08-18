@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+    let num = parseInt(prompt("nhập số lượng từ vào"));
+    let arr = new Array(num);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt("Số thứ nhất là:" +(i +1))
+    } document.write(arr.sort(function (b,a) {
+        return a-b
+    }))
+</script>
+</body>
+</html>
