@@ -6,15 +6,15 @@
 </head>
 <body>
 <form>
-    <input type="number" id="month">
+    <label for="month"></label><input type="number" id="month">
     <button onclick="day()">Tính số ngày</button>
         <p id="kq"></p>
  </form>
 </body>
 <script>
     function day() {
-        let thang= parseInt(document.getElementById('month').value);
-        switch (thang) {
+        let month= parseInt(document.getElementById('month').value);
+        switch (month) {
             case 1:
             case 3:
             case 5:
@@ -34,8 +34,6 @@
                 document.getElementById('kq').innerHTML=('Tháng có 28 hoặc 29 ngày')
                 break
         }
-
-
     }
 </script>
 </html>

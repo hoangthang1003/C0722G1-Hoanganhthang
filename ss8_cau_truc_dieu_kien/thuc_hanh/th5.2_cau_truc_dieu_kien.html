@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>TH5.2</title>
 </head>
 <body>
-$END$
+<script>
+    let login=prompt('Enter');
+    let message=prompt('Employee')?
+        'Hello':
+        (login=='Director')?
+            'Greetings':
+            (login=='')?
+                'No login':
+                '';
+    alert(message)
+</script>
 </body>
 </html>

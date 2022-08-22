@@ -9,13 +9,12 @@
     let numA = prompt("Nhập bán kính hình tròn vào");
     let dienTich = 0;
     let chuVi = 0;
-    function hinhTron() {
-        document.write( dienTich = numA * numA * 3.14);
+    function hinhTron(number) {
+        document.write( dienTich = number * number * 3.14);
         document.write("<br>")
-        document.write(chuVi = 2 * numA * 3.14);
-        return;
+        document.write(chuVi = 2 * number * 3.14);
     }
-    hinhTron()
+    hinhTron(numA)
 </script>
 </body>
 </html>

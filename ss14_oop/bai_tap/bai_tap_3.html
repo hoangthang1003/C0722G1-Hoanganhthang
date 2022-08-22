@@ -6,15 +6,35 @@
 </head>
 <body>
 <script>
-    class Switchbutton {
-        constructor(boolean,ElectricLamp) {
-            this.status = boolean;
-            this.lamp = ElectricLamp;
-        }
-        switchon() {
-            
+    class Lamp {
+        constructor() {
+            this.status = status;
         }
     }
+    class Switch {
+        constructor() {
+            this.status = false;
+            this.lamp = null;
+        }
+        TurnOff() {
+            this.lamp.status = false;
+            return this.status = false;
+        }
+        TurnOn() {
+            this.lamp.status = true;
+            return this.status = true;
+        }
+        collectToLamp(bongDen) {
+            this.lamp = bongDen;
+        }
+    }
+    let den = new Lamp();
+    let congtac = new Switch();
+    congtac.collectToLamp(den);
+    document.write(" Trạng thái công tắc: " + congtac.TurnOff() + "<br>");
+    document.write(" Trạng thái bóng đèn: " + den.status + "<br>");
+    document.write(" Trạng thái công tắc: " + congtac.TurnOn() + "<br>");
+    document.write(" Trạng thái bóng đèn: " + den.status + "<br>");
 </script>
 </body>
 </html>

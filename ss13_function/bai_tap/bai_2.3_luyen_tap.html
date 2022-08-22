@@ -6,14 +6,17 @@
 </head>
 <body>
 <script>
-    let giaiThua=1;
+    let giaiThua = 1;
+
     function numBer(numA) {
 
         for (let i = 1; i <= numA; i++) {
-            giaiThua*=i;
+            giaiThua *= i;
 
-        }return giaiThua;
+        }
+        return giaiThua;
     }
+
     document.write(numBer(+prompt("nhập số")))
 </script>
 </body>

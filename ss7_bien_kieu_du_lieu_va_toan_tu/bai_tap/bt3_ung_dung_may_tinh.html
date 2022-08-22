@@ -8,46 +8,57 @@
 <h1><strong>Caculator</strong></h1>
 <table>
     <tr>
-        <td colspan="2"><input type="text"id="trc"></td>
-        <td colspan="2"><input type="text"id="sau"></td>
+        <td colspan="2"><input type="text" id="trc"></td>
+        <td colspan="2"><input type="text" id="sau"></td>
     </tr>
-<tr>
-    <td><button onclick="cong()";>Addition(+)</button></td>
-    <td><button onclick="tru()";>Subtraction(-)</button></td>
-    <td><button onclick="nhan()";>Multiplication(*)</button></td>
-    <td><button onclick="chia()";>Division(/)</button></td>
-</tr>
+    <tr>
+        <td>
+            <button onclick="cong()" ;>Addition(+)</button>
+        </td>
+        <td>
+            <button onclick="tru()" ;>Subtraction(-)</button>
+        </td>
+        <td>
+            <button onclick="nhan()" ;>Multiplication(*)</button>
+        </td>
+        <td>
+            <button onclick="chia()" ;>Division(/)</button>
+        </td>
+    </tr>
 </table>
-<p id="kq"></p>
+<p id="ketqua"></p>
 </body>
 <script>
-    function cong(){
-    let num1=document.getElementById('trc').value;
-    let num2=document.getElementById('sau').value;
-    num1=parseFloat(num1);
-    num2=parseFloat(num2);
-    document.getElementById('kq').innerHTML="kết quả là " +(num1+num2) ;
+    function cong() {
+        let num1 = document.getElementById('truoc').value;
+        let num2 = document.getElementById('sau').value;
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+        document.getElementById('ketqua').innerHTML = "kết quả là " + (num1 + num2);
     }
-        function tru(){
-    let num1=document.getElementById('trc').value;
-    let num2=document.getElementById('sau').value;
-    num1=parseFloat(num1);
-    num2=parseFloat(num2);
-    document.getElementById('kq').innerHTML="kết quả là " +(num1-num2);
-        }
-            function nhan(){
-    let num1=document.getElementById('trc').value;
-    let num2=document.getElementById('sau').value;
-    num1=parseFloat(num1);
-    num2=parseFloat(num2);
-    document.getElementById('kq').innerHTML="kết quả là " +(num1*num2);
-            }
-                function chia(){
-    let num1=document.getElementById('trc').value;
-    let num2=document.getElementById('sau').value;
-    num1=parseFloat(num1);
-    num2=parseFloat(num2);
-    document.getElementById('kq').innerHTML="kết quả là " +(num1/num2);
+
+    function tru() {
+        let num1 = document.getElementById('truoc').value;
+        let num2 = document.getElementById('sau').value;
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+        document.getElementById('ketqua').innerHTML = "kết quả là " + (num1 - num2);
+    }
+
+    function nhan() {
+        let num1 = document.getElementById('truoc').value;
+        let num2 = document.getElementById('sau').value;
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+        document.getElementById('ketqua').innerHTML = "kết quả là " + (num1 * num2);
+    }
+
+    function chia() {
+        let num1 = document.getElementById('truoc').value;
+        let num2 = document.getElementById('sau').value;
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+        document.getElementById('ketqua').innerHTML = "kết quả là " + (num1 / num2);
     }
 
 
