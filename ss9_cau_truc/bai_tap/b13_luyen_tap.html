@@ -5,6 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    // Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.
+    let canhKeA = +prompt("Nhập cạnh thứ nhất ");
+    let canhKeB = +prompt("Nhập cạnh thứ hai");
+    let dienTich = 1/2*canhKeA*canhKeB;
+    if(canhKeB > 0  || canhKeA > 0 ) {
+        document.write(dienTich)
+    } else {
+        alert("Nhập lại");
+    }
+</script>
 </body>
 </html>
