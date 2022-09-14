@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soTien = +prompt("Nhập số tiền gốc vào:");
+    let soThang = +prompt("Nhập số tháng vào");
+    let laiSuat;
+    let tongTien;
+    for (let i = 0; i < soThang; i++) {
+        laiSuat = soTien*15/100;
+        tongTien = soTien + laiSuat;
+        soTien = tongTien;
+    }
+    alert("Số tiền sau khi tăng là " + parseInt(tongTien));
+</script>
+</body>
+</html>
