@@ -9,17 +9,18 @@
     //  Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
     //  Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng
     //  (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)
-    let num = [1,2,2,3,4];
+    let num = [1,2,3,4,5,6,7,8,9];
     let numV = parseInt(prompt("Nhập số phần tử V vào"));
     for (let i = 0; i < num.length; i++) {
-        if (num[i] == numV ) {
-            for (let j = i; j <num.length; j++) {
+        if (num[i] === numV ) {
+            for (let j = i; j < num.length; j++) {
                 num[j]= num[j+1];//12344
             }
             num[num.length-1]=0;//12340
-            i--;
+            // i--;
         }
-    } document.write(num)
+    }
+    document.write(num);
 
 </script>
 </body>

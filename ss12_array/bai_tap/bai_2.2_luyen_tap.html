@@ -11,11 +11,9 @@
     let num = parseInt(prompt("Nhập số lượng phần tử vào"));
     let arrA = new Array(num);
     for (let i = 0; i < arrA.length; i++) {
-        arrA[i] = +prompt("Nhập số thứ " + (i+1));
+        arrA[i] = prompt("Nhập số thứ " + (i+1));
     }
-    document.write(arrA.sort(function (b,a) {
-        return a-b
-    }))
+    document.write(arrA.reverse());
 </script>
 </body>
 </html>
