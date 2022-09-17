@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
+let chuoiA = prompt("Nhập 1 chuỗi vào");
+let arrA = Array.from(chuoiA.toString());
+let chuoiB = prompt("Nhập vào 1 chuỗi");
+let arrB = Array.from(chuoiB.toString());
+let count= true ;
+        for (let i = 0; i <arrA.length ; i++) {
+            if(arrA[i] !== arrB[i]) {
+                count = false;
+            }
+        }
+        if(count ) {
+            alert("Hai chuỗi giống nhau");
+        } else {
+            alert("Hai chuỗi không giống nhau");
+        }
+
+</script>
+</body>
+</html>
