@@ -5,36 +5,54 @@
     <title>Title</title>
 </head>
 <body>
+<button type="button" onclick="turnOnSwitch()">Bật đèn</button>
+<button type="button" onclick="turnOffSwitch()">Tắt đèn</button>
 <script>
-    class Lamp {
-        constructor() {
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+        getStatus(status) {
             this.status = status;
         }
     }
+
     class Switch {
-        constructor() {
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+        connecttoLamp(ElectricLamp) {
+            return this.status = ElectricLamp;
+        }
+        switchOn() {
+            alert('Công tắc bật!');
+            this.lamp.getStatus(true);
+            this.status = true;
+        }
+        switchOff() {
+            alert('Công tắc tắt!');
+            this.lamp.getStatus(false);
             this.status = false;
-            this.lamp = null;
-        }
-        TurnOff() {
-            this.lamp.status = false;
-            return this.status = false;
-        }
-        TurnOn() {
-            this.lamp.status = true;
-            return this.status = true;
-        }
-        collectToLamp(bongDen) {
-            this.lamp = bongDen;
         }
     }
-    let den = new Lamp();
-    let congtac = new Switch();
-    congtac.collectToLamp(den);
-    document.write(" Trạng thái công tắc: " + congtac.TurnOff() + "<br>");
-    document.write(" Trạng thái bóng đèn: " + den.status + "<br>");
-    document.write(" Trạng thái công tắc: " + congtac.TurnOn() + "<br>");
-    document.write(" Trạng thái bóng đèn: " + den.status + "<br>");
+
+
+    let lamp = new ElectricLamp(false);
+    let switchBtn = new Switch(false, lamp);
+
+    function turnOnSwitch() {
+        switchBtn.switchOn();
+        document.write('Đèn đang bật! <br>');
+        document.write('<button type="button" onclick="turnOffSwitch()">Tắt đèn</button><br>');
+
+    }
+    function turnOffSwitch() {
+        switchBtn.switchOff();
+        document.write('Đèn đang tắt!<br>');
+        document.write('<button type="button" onclick="turnOnSwitch()">Bật đèn</button><br>');
+
+    }
 </script>
 </body>
 </html>
