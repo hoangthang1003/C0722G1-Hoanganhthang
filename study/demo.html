@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="ma" placeholder="nhập mã máy">
+<input type="text" id="ten" placeholder="nhập tên máy">
+<input type="text" id="hang" placeholder="nhập hãng máy">
+<input type="text" id="gia" placeholder="nhập giá máy">
+<input type="button" onclick="addNewMayTinh()" value="Add new Máy Tính">
+<p id="display"></p>
+<script>
+    class MayTinh {
+        constructor(ma, ten, hang, gia) {
+            this.ma=ma;
+            this.ten=ten;
+            this.hang=hang;
+            this.gia=gia;
+        }
+        setMa(ma){
+            this.ma=ma;
+        }
+        setTen(ten){
+            this.ten=ten;
+        }
+        setHang(hang){
+            this.hang=hang;}
+
+        setGia(gia){
+            this.gia=gia;
+        }
+        getMa(){
+            return this.ma;
+        }
+        getTen(){
+            return this.ten;
+        }
+        getHang(){
+            return this.hang;
+        }
+        getGia(){
+            return this.gia;
+        }
+    }
+    let danhSachMayTinh = [];
+    display(danhSachMayTinh);
+    function display(list) {
+        let tableString = '<table border="1">\n'+
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Ma</th>\n' +
+            '        <th>Ten</th>\n' +
+            '        <th>Hang</th>\n' +
+            '        <th>Gia</th>\n' +
+            '        <th>Delete</th>\n' +
+            '        <th>Edit</th>\n' +
+            '    </tr>';
+        for (let i = 0; i <list.length ; i++) {
+            tableString += '<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + list[i].getMa() + '</td>\n' +
+                '        <td>' + list[i].getTen() + '</td>\n' +
+                '        <td>' + list[i].getHang() + '</td>\n' +
+                '        <td>' + list[i].getGia() + '</td>\n' +
+                '        <td><input type="button" onclick="deleteMayTinhById(' + i + ')" value="Delete"></td>\n' +
+                '        <td><input type="button" onclick="editMayTinhById(' + i + ')" value="Edit"></td>\n' +
+                '    </tr>';
+        }
+        tableString += '</table>';
+        document.getElementById("display").innerHTML = tableString;
+    }
+    // function deleteMayTinhById(index) {
+    //     let conf = confirm("Bạn có muốn xoá sinh viên tên: " + danhSachMayTinh[index].getTen());
+    //     if (conf) {
+    //         danhSachMayTinh.splice(index, 1);
+    //     }
+    //     display(danhSachMayTinh);
+    // }
+    // function editMayTinhById(index) {
+    //     let editMa=prompt("nhập mã máy mới:" + danhSachMayTinh[index].getMa());
+    //     let editTen=prompt("nhập tên máy mới:");
+    //     let editHang=prompt("nhập hãng sản suất mới:");
+    //     let editGia=prompt("nhập giá bán mới:");
+    //     danhSachMayTinh[index].setMa(editMa);
+    //     danhSachMayTinh[index].setTen(editTen);
+    //     danhSachMayTinh[index].setHang(editHang);
+    //     danhSachMayTinh[index].setGia(editGia);
+    //     display(danhSachMayTinh);
+    // }
+    function addNewMayTinh() {
+        let ma = document.getElementById("ma").value;
+        let ten = document.getElementById("ten").value;
+        let hang = document.getElementById("hang").value;
+        let gia = document.getElementById("gia").value;
+        let newMayTinh = new MayTinh(ma,ten,hang,gia);
+        danhSachMayTinh.push(newMayTinh);
+        display(danhSachMayTinh);
+
+    }
+</script>
+</html>

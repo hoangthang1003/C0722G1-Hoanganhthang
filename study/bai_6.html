@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 2: Viết chương trình kiểm tra một ký tự trong bảng chữ cái tiếng anh là nguyên âm hay phụ âm.
+    //     Ký tự là bất kỳ được nhập từ bàn phím.
+    //     Các ký tự nguyên âm bao gồm: 'o', 'u', 'i', 'a', 'e' hoặc 'O', 'U', 'I', 'A', 'E'
+    let kiemTra = prompt("Nhập chữ cái tiếng anh vào");
+    if (!isNaN(kiemTra)) {
+        alert("Nhập lại");
+    } else if (kiemTra === "o" || kiemTra === "u" || kiemTra === "i" || kiemTra === "a" || kiemTra === "e" || kiemTra === "O" || kiemTra === "U" || kiemTra === "I" || kiemTra === "A" || kiemTra === "E") {
+        alert("Đây là kí tự nguyên âm");
+    } else {
+        alert("Đây là phụ âm")
+    }
+</script>
+</body>
+</html>

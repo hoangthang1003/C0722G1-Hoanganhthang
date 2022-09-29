@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Cho hai xâu kí tự, tìm số lượng ký tự chung giữa chúng.
+    //     Ví dụ:
+    //     Với s1 = "aabcc" và s2 = "adcaa",
+    //     2 xâu s1 và s2 có 3 kí tự chung: 2 kí tự 'a' và 1 kí tự 'c'.
+    let s1 = "aabcc";
+    s2 = "adcaa";
+    let arrB = [];
+    function solution(s1, s2) {
+        arr = Array.from(s1.toString());
+        arrA = Array.from(s2.toString());
+        for (let i = 0; i < arr.length; i++) {
+            for (let j=0;i< arrA.length;j++){
+            if (arr[i]=arrA[i]) {
+                arrB.push(arr[i], arrA[i]);
+            }
+            }
+        }
+    }
+    alert(solution(s1,s2));
+</script>
+</body>
+</html>

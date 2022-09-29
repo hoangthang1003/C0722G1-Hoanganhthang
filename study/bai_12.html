@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 1: Viết một hàm chuẩn hóa xâu ký tự: biến đổi xâu ký tự thành xâu sao cho trong xâu không có 2 dấu cách liền nhau và bắt đầu mỗi từ phải in hoa.
+    // Ví dụ tRuong    TaN   HAI => Truong Tan Hai.
+    //     Và một hàm tìm từ dài nhất trong 1 xâu ký tự.
+    //     Hàm main sử dụng các hàm này để nhập xâu ký tự từ bàn phím, in ra xâu trước và sau khi chuẩn hóa, 1 từ dài nhất trong xâu đó.
+    let ten = prompt("Nhập tên ");
+    function chuyenDoi(name) {
+        name=name.toLowerCase();
+        let array = name.split(" ");
+        for (let i = 0; i < array.length ; i++) {
+            if (array[i].length === 0){
+                array.splice(i,1);
+            }
+        }
+        for (let j = 0; j < array.length; j++) {
+            array[j] = array[j][0].toUpperCase() + array[j].slice(1);
+        }
+        return array.join(" ");
+    }
+    document.write("Tên sau khi chuyển hóa: "+chuyenDoi(ten));
+</script>
+</body>
+</html>

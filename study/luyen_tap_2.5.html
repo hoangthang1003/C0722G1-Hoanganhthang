@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Add New product</h1>
+<input type="text" id="nhap" placeholder="Nhập sản phẩm">
+<button onclick="themSanPham()" value="Add">Add</button>
+<p id="hienthi"></p>
+<script>
+    danhSachMayTinh = ["Acer", "Macbook", "ThinkPad"];
+    hienthi();
+    function hienthi() {
+        let tableString = '<table border = "1" > \n' +
+            '<tr>\n' +
+            '<td>STT</td>' +
+            '<td>Tên sản phẩm</td>' +
+            '<td>Edit </td>' +
+            '<td>Delete </td>' +
+            '</tr>';
+        for (let i = 0; i < danhSachMayTinh.length; i++) {
+            tableString +=
+                '<tr>\n' +
+                '<td>' + (i + 1) + '</td>' +
+                '<td>' + danhSachMayTinh[i] + '</td>' +
+                '<td><button onclick="suaSanPham(' + i + ')" >Edit</button> </td>' +
+                '<td><button onclick="xoaSanPham(' + i + ')" >Delete</button> </td>' +
+                '</tr>';
+        }
+        tableString += '</table>'
+        document.getElementById("hienthi").innerHTML = tableString;
+    }
+    function themSanPham() {
+        let themMoi = document.getElementById("nhap").value;
+        if( themMoi === "") {
+            alert("Vui lòng điền tên sản phẩm");
+        } else {
+            danhSachMayTinh.push(themMoi);
+            hienthi();
+        }
+    }
+    function suaSanPham(index) {
+        danhSachMayTinh[index] = prompt("Nhập lại đây");
+        hienthi();
+    }
+    function xoaSanPham(index) {
+        let xacNhan = confirm("Bạn có muốn xóa hay không");
+        if(xacNhan) {
+            danhSachMayTinh.splice(index,1);
+        }
+        hienthi();
+    }
+</script>
+</body>
+</html>

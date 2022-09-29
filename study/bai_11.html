@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrA = ["Cafe", "Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Nước dừa"];
+    let arrB = ["15", "20", "10", "10", "5", "10"]
+    let tongTien = 0;
+    let thucDon =0;
+
+    do {
+          thucDon = +prompt("Thực đơn thức uống bao gồm :" + "\n" + "1.Cafe" + "\n" + "2.Cam vắt" + "\n" + "3.Nước ép cà rốt" + "\n" + "4.Nước ép cà chua" + "\n" + "5.Nước lọc" + "\n" + "6.Nước dừa"+"\n"+"Bấm 7 để thanh toán")
+        if(thucDon !==7) {
+        let soLuong;
+            alert("Bạn đã chọn "+arrA[thucDon-1]+"\n"+"Món này có giá " + arrB[thucDon-1] + " k");
+            soLuong = +prompt("Nhập số lượng bạn muốn vào");
+            tongTien += soLuong*arrB[thucDon];
+        }
+        } while ( thucDon !== 7 );
+    alert("Tổng số tiền của bạn là: "+ tongTien)
+
+</script>
+</body>
+</html>

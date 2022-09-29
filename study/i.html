@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = +prompt("Nhập số phần tử trong mảng");
+    let arrA = [];
+    let count = 0;
+    for (let i = 0; i < num; i++) {
+        arrA[i] = +prompt("Số thứ tự là :"+(i+1));
+    }
+    function checkarr(arr) {
+        for (let i = 0; i < arr.length; i += 2) {
+            if (arr[i] > arr[i + 1]) {
+                count++;
+                if (arr[i + 1] < arr[i + 2]) {
+                    count++;
+                }
+            } else {
+                if (arr[i] < arr[i + 1]) {
+                    count++;
+                    if (arr[i + 1] > arr[i + 2]) {
+                        count++;
+                    }
+                }
+            }
+        }
+        if (count - (arr.length - 1) === 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    alert(checkarr(arrA));
+</script>
+</body>
+</html>

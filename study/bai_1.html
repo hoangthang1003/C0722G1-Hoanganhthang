@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 1: Vẽ hình chữ nhật rỗng chiều dài n và chiều rộng m theo hình dưới đây.
+        // Ví dụ: x = 4, y = 5
+
+    let n = +prompt("Nhập chiều dài vào");
+    let m = +prompt("Nhập chiều rộng vào");
+    for (let i = 0; i <= n; i++) {
+        for (let j = 0; j <= m; j++) {
+            if(i == 0 || i==n || j ==0 || j == m) {
+                document.write("*")
+            }else {
+                document.write("&nbsp&nbsp");}
+        }
+        document.write("<br>")
+    }
+</script>
+</body>
+</html>

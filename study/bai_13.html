@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//     Bài 2: Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó
+//     Ví dụ: s = "cabca", thì kết quả differentSymbolsNaive(s) = 3.
+// ⇨	Có 3 kí tự khác nhau là a, b và c
+let num = prompt("Nhập vào đây 1 chuỗi kí tự");
+let arr = Array.from(num.toString());
+
+// for (let i = 0; i < arr.length; i++) {
+//     if(!arrA.includes(arr[i])) {
+//         arrA.push(arr[i])
+//     }
+// } alert("Ta có mảng kí tự" + arrA +"\n"+"Số lượng kí tự " + arrA.length);
+
+let arrayA=[]
+for (let i = 0; i < arr.length; i++) {
+    let check=false;
+    for (let j = 0; j <arrayA.length ; j++) {
+        if(arrayA[j] == arr[i]){
+            check =true;
+            break;
+        }
+    }
+    if (!check){
+        arrayA.push(arr[i]);
+    }
+}
+alert("Ta có mảng kí tự" +arrayA +"\n"+"Số lượng kí tự " + arrayA.length);
+
+// for (let i = 0; i < arr.length; i++) {
+//     for (let j = i+1; j < arr.length; j++) {
+//         if(arr[j] === arr[i]) {
+//             arr.splice(j,1);
+//         }
+//     }
+// } alert(arr);
+
+</script>
+</body>
+</html>
