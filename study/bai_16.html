@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 3: Viết hàm tìm giá trị lớn nhất, nhỏ nhất trong mảng 2 chiều
+    let numM = +prompt("Nhập số cột");
+    let numN = +prompt("Nhập số hàng");
+    let array = [];
+
+    for (let i = 0; i < numM; i++) {
+        array[i] = [];
+        for (let j = 0; j < numN; j++) {
+            array[i][j] = +prompt("Nhập số vào");
+        }
+    }
+    function timMin(arr) {
+        let min = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j <arr[j].length; j++) {
+                if (arr[i][j] < min) {
+                    min = arr[i][j];
+                }
+            }
+        }
+        return min;
+    }
+    function timMax(arr) {
+        let max = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j <arr[i].length; j++) {
+                if (arr[i][j] > max) {
+                    max = arr[i][j];
+                }
+            }
+        }
+        return max;
+    }
+    alert(timMin(array)+"\n"+timMax(array));
+</script>
+</body>
+</html>
